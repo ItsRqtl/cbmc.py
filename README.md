@@ -5,7 +5,7 @@ Unofficial 麥塊匿名發文平台 API Wrapper for Python
 ## Installation
 
 ```sh
-pip install cbmc
+pip install cbmc.py
 ```
 
 ## Usage
