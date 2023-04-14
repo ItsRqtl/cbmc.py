@@ -26,6 +26,7 @@ __all__ = [
     "CbmcException",
     "CbmcAPIException",
     "NotFound",
+    "HTTPException",
 ]
 
 
