@@ -100,7 +100,7 @@ class SyncCbmc(CbmcBase):
             if resp.status_code == 200:
                 data = resp.json()
                 if data["status"] == "success" and "posts" in data:
-                    return [Post(i) for i in data["posts"]]
+                    return [Post(i["post"]) for i in data["posts"].values()]
             raise HTTPException(f"HTTP request failed with status code {resp.status_code}.")
 
     @classmethod
@@ -173,7 +173,7 @@ class AsyncCbmc(CbmcBase):
                 if resp.status == 200:
                     data = await resp.json()
                     if data["status"] == "success" and "posts" in data:
-                        return [Post(i) for i in data["posts"]]
+                        return [Post(i["post"]) for i in data["posts"].values()]
                 raise HTTPException(f"HTTP request failed with status code {resp.status}.")
 
     @classmethod
