@@ -42,6 +42,27 @@ class Post:
 
         :param data: The data of the post.
         :type data: dict
+
+        :ivar post_id: The post ID of the post.
+        :vartype post_id: int
+        :ivar platform_id: The platform ID of the post.
+        :vartype platform_id: int
+        :ivar type: The post type of the post.
+        :vartype type: str
+        :ivar content: The content of the post.
+        :vartype content: str
+        :ivar photo: The photo url of the post.
+        :vartype photo: str | None
+        :ivar admin_post: Whether the post is an admin post.
+        :vartype admin_post: bool
+        :ivar approve_timestamp: The timestamp of when the post was approved.
+        :vartype approve_timestamp: int | None
+        :ivar approve_time: The time of when the post was approved.
+        :vartype approve_time: datetime.datetime | None
+        :ivar approve_user: The user who approved the post.
+        :vartype approve_user: str | None
+        :ivar fbid: The Facebook ID of the post.
+        :vartype fbid: str | None
         """
         self._post_id = data.get("id", {}).get("post")
         self._platform_id = data.get("id", {}).get("platform")
