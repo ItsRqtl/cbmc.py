@@ -137,6 +137,8 @@ class AsyncCbmc(CbmcBase):
         :return: The post object.
         :rtype: Post
         """
+        if not isinstance(post_id, int):
+            raise TypeError("The post ID must be an integer.")
         url = f"{cls.base_url}/post/{post_id}"
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as resp:

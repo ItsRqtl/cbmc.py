@@ -48,18 +48,23 @@ class Post:
         self._type = data.get("type")
         self._content = data.get("content")
         self._photo = data.get("photo")
-        self._admin_post = data.get("adminPost", False)
-        self._approve_timestamp = data.get("approve", {}).get("timestamp", 0)
-        self._approve_time = datetime.datetime.utcfromtimestamp(self._approve_timestamp)
+        self._admin_post = data.get("adminPost")
+        self._approve_timestamp = data.get("approve", {}).get("timestamp")
         self._approve_user = data.get("approve", {}).get("user")
         self._fbid = data.get("fbid")
+
+        if self._approve_timestamp is not None:
+            approve_time = datetime.datetime.utcfromtimestamp(self._approve_timestamp)
+            self._approve_time = approve_time.replace(tzinfo=datetime.timezone.utc)
+        else:
+            self._approve_time = None
 
     @property
     def post_id(self) -> int:
         """
-        Get the post ID.
+        The post ID of the post.
 
-        :return: The post ID.
+        :return: The value of the post ID.
         :rtype: int
         """
         return self._post_id
@@ -67,9 +72,9 @@ class Post:
     @property
     def platform_id(self) -> int:
         """
-        Get the platform ID.
+        The platform ID of the post.
 
-        :return: The platform ID.
+        :return: The value of the platform ID.
         :rtype: int
         """
         return self._platform_id
@@ -77,9 +82,9 @@ class Post:
     @property
     def type(self) -> str:
         """
-        Get the post type.
+        The post type of the post.
 
-        :return: The post type.
+        :return: The value of the post type.
         :rtype: str
         """
         return self._type
@@ -87,9 +92,9 @@ class Post:
     @property
     def content(self) -> str:
         """
-        Get the post content.
+        The content of the post.
 
-        :return: The post content.
+        :return: The value of the content.
         :rtype: str
         """
         return self._content
@@ -97,7 +102,7 @@ class Post:
     @property
     def photo(self) -> str | None:
         """
-        Get the post photo.
+        The photo url of the post.
 
         :return: The post photo url or None if there is no photo.
         :rtype: str | None
@@ -107,7 +112,7 @@ class Post:
     @property
     def admin_post(self) -> bool:
         """
-        Get whether the post is an admin post.
+        Whether the post is an admin post.
 
         :return: Whether the post is an admin post.
         :rtype: bool
@@ -117,7 +122,7 @@ class Post:
     @property
     def approve_time(self) -> datetime.datetime:
         """
-        Get the time the post was approved. (UTC)
+        The time the post was approved in UTC.
 
         :return: The time the post was approved.
         :rtype: datetime.datetime
@@ -127,7 +132,7 @@ class Post:
     @property
     def approve_timestamp(self) -> int:
         """
-        Get the timestamp the post was approved. (Unix timestamp UTC)
+        The Unix timestamp the post was approved in UTC.
 
         :return: The timestamp the post was approved.
         :rtype: int
@@ -137,7 +142,7 @@ class Post:
     @property
     def approve_user(self) -> str:
         """
-        Get the user who approved the post.
+        The user who approved the post.
 
         :return: The user who approved the post.
         :rtype: str
@@ -147,7 +152,7 @@ class Post:
     @property
     def fbid(self) -> str:
         """
-        Get the post fbid.
+        The fbid of the post.
 
         :return: The post fbid.
         :rtype: str
