@@ -48,11 +48,16 @@ class Post:
         self._type = data.get("type")
         self._content = data.get("content")
         self._photo = data.get("photo")
-        self._admin_post = data.get("adminPost", False)
-        self._approve_timestamp = data.get("approve", {}).get("timestamp", 0)
-        self._approve_time = datetime.datetime.utcfromtimestamp(self._approve_timestamp)
+        self._admin_post = data.get("adminPost")
+        self._approve_timestamp = data.get("approve", {}).get("timestamp")
         self._approve_user = data.get("approve", {}).get("user")
         self._fbid = data.get("fbid")
+
+        if self._approve_timestamp is not None:
+            approve_time = datetime.datetime.utcfromtimestamp(self._approve_timestamp)
+            self._approve_time = approve_time.replace(tzinfo=datetime.timezone.utc)
+        else:
+            self._approve_time = None
 
     @property
     def post_id(self) -> int:
