@@ -25,11 +25,18 @@ pip install cbmc.py
 # Import the library
 from cbmc import AsyncCbmc, SyncCbmc
 
+api = SyncCbmc()
+
 # Obtain post with post id, raise cbmc.NotFound if not found
-SyncCbmc.get_post(1)
+api.get_post(1)
 
 # List recent posts, maximum 300 posts.
-SyncCbmc.get_posts()
+api.get_posts()
+
+# Directly call the method also works
+# Creating an instance is not required, but it is recommended for future updates.
+# (some planned new features will require that)
+SyncCbmc.get_post(1)
 
 # Also available in async
 async def main():

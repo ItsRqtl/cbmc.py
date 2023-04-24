@@ -35,6 +35,10 @@ Get a post from 麥塊匿名發文平台 with the given parameters.
 
 ```py
 api.get_post(post_id=1)
+
+# or
+
+SyncCbmc.get_post(post_id=1) # directly call the method also works if you don't need to use the instance
 ```
 
 ### `get_posts(params)` ⇒ \[[List](https://docs.python.org/3/library/typing.html#typing.List)\[[Post](#post)]]
@@ -49,6 +53,10 @@ Get a list of posts from 麥塊匿名發文平台 with the given parameters.
 
 ```py
 api.get_posts(limit=10)
+
+# or
+
+SyncCbmc.get_posts(limit=10) # directly call the method also works if you don't need to use the instance
 ```
 
 ### `get_status(params)` ⇒ \[[dict](https://docs.python.org/3/library/stdtypes.html#dict)]
@@ -64,6 +72,10 @@ This method is NOT implemented yet.
 
 ```py
 api.get_status(code="123456")
+
+# or
+
+SyncCbmc.get_status(code="123456") # directly call the method also works if you don't need to use the instance
 ```
 
 ---
@@ -88,6 +100,10 @@ Get a post from 麥塊匿名發文平台 with the given parameters.
 
 ```py
 await api.get_post(post_id=1)
+
+# or
+
+await AsyncCbmc.get_post(post_id=1) # directly call the method also works if you don't need to use the instance
 ```
 
 ### `await get_posts(params)` ⇒ \[[List](https://docs.python.org/3/library/typing.html#typing.List)\[[Post](#post)]]
@@ -102,6 +118,10 @@ Get a list of posts from 麥塊匿名發文平台 with the given parameters.
 
 ```py
 await api.get_posts(limit=10)
+
+# or
+
+await AsyncCbmc.get_posts(limit=10) # directly call the method also works if you don't need to use the instance
 ```
 
 ### `await get_status(params)` ⇒ \[[dict](https://docs.python.org/3/library/stdtypes.html#dict)]
@@ -117,6 +137,10 @@ This method is NOT implemented yet.
 
 ```py
 await api.get_status(code="123456")
+
+# or
+
+await AsyncCbmc.get_status(code="123456") # directly call the method also works if you don't need to use the instance
 ```
 
 ---

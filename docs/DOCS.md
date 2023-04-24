@@ -37,3 +37,7 @@ Let's take a look at what is happening:
 - `import cbmc` - This is the import line. If this returns a `ModuleNotFoundError`, please look at the section on how to install [here](#installing).
 - `api = cbmc.SyncCbmc()` - This is the `api` variable that holds the api instance.
 - `api = cbmc.AsyncCbmc()` - This is the `api` variable that holds the async api instance, where you can call the api asynchronously.
+
+Note:  
+All methods can be called directly from the class, so you can also do `cbmc.SyncCbmc.get_post()` instead of `api.get_post()`.  
+Creating an instance is not required, but it is recommended for future updates (some planned new features will require that).
