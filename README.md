@@ -1,5 +1,14 @@
 # cbmc.py
 
+<!-- Add a badge here -->
+
+[![Coverage](.github/assets/coverage.svg)](https://pypi.org/project/cbmc.py/)
+[![CodeFactor](https://www.codefactor.io/repository/github/itsrqtl/cbmc.py/badge)](https://www.codefactor.io/repository/github/itsrqtl/cbmc.py)
+
+[![PyPI](https://img.shields.io/pypi/v/cbmc.py)](https://pypi.org/project/cbmc.py/)
+[![PyPI - License](https://img.shields.io/pypi/l/cbmc.py)](https://pypi.org/project/cbmc.py/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/cbmc.py)](https://pypi.org/project/cbmc.py/)
+
 Unofficial 麥塊匿名發文平台 API Wrapper for Python
 
 ## Installation
