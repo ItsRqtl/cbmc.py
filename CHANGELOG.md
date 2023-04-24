@@ -21,6 +21,6 @@ All notable changes to this project will be documented in this file.
 - get_posts() now returns a list of posts correctly (#2)
 - add missing HTTPException to \_\_all\_\_ (#2)
 
-[unreleased]: https://github.com/ItsRqtl/cbmc.py/compare/v1.1.1...HEAD
+[unreleased]: https://github.com/ItsRqtl/cbmc.py/compare/v0.0.3...HEAD
 [0.0.3]: https://github.com/ItsRqtl/cbmc.py/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/ItsRqtl/cbmc.py/releases/tag/v0.0.2
