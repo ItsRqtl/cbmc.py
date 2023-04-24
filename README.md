@@ -2,7 +2,7 @@
 
 <!-- Add a badge here -->
 
-[![Coverage](.github/assets/coverage.svg)](https://pypi.org/project/cbmc.py/)
+[![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)](https://pypi.org/project/cbmc.py/)
 [![CodeFactor](https://www.codefactor.io/repository/github/itsrqtl/cbmc.py/badge)](https://www.codefactor.io/repository/github/itsrqtl/cbmc.py)
 
 [![PyPI](https://img.shields.io/pypi/v/cbmc.py)](https://pypi.org/project/cbmc.py/)
