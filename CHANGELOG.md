@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.4] - 2023-04-28
+
+### Added
+
+- proper documentation for all functions and classes
+- create changelog for the project
+
 ## [0.0.3] - 2023-04-24
 
 ### Changed
