@@ -151,8 +151,14 @@ def test_sync_get_posts() -> None:
         assert posts[0].post_id == 1703
         assert posts[0].platform_id == 2067
         assert posts[0].type == "靠北麥塊"
-        assert posts[0].content == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
-        assert posts[0].__str__() == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        assert (
+            posts[0].content
+            == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        )
+        assert (
+            posts[0].__str__()
+            == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        )
         assert posts[0].photo is None
         assert posts[0].admin_post is False
         assert posts[0].approve_timestamp == 1682317224
@@ -352,8 +358,14 @@ async def test_async_get_posts() -> None:
         assert posts[0].post_id == 1703
         assert posts[0].platform_id == 2067
         assert posts[0].type == "靠北麥塊"
-        assert posts[0].content == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
-        assert posts[0].__str__() == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        assert (
+            posts[0].content
+            == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        )
+        assert (
+            posts[0].__str__()
+            == "確定某瑞只有跑去開GTA嗎?\r\n\r\n搞不好換了個名字 繼續開騙錢服 準備再次惡意倒閉呢\r\n\r\n呵呵呵~~"
+        )
         assert posts[0].photo is None
         assert posts[0].admin_post is False
         assert posts[0].approve_timestamp == 1682317224
